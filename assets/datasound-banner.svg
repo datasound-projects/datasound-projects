@@ -1,0 +1,112 @@
+<svg width="1600" height="520" viewBox="0 0 1600 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#050505"/>
+      <stop offset="52%" stop-color="#0B0B0C"/>
+      <stop offset="100%" stop-color="#111113"/>
+    </linearGradient>
+
+    <radialGradient id="orangeGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(1180 260) rotate(180) scale(520 360)">
+      <stop offset="0%" stop-color="#FF7A1A" stop-opacity="0.24"/>
+      <stop offset="55%" stop-color="#FF7A1A" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FF7A1A" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="softBlur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="70"/>
+    </filter>
+
+    <filter id="lineGlow" x="-20%" y="-80%" width="140%" height="260%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="textGlow" x="-20%" y="-40%" width="140%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0.95
+                0 0.45 0 0 0.24
+                0 0 0.10 0 0.02
+                0 0 0 0.16 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <linearGradient id="lineGrad" x1="260" y1="0" x2="1340" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="18%" stop-color="#D8D8D8" stop-opacity="0.18"/>
+      <stop offset="48%" stop-color="#FF7A1A" stop-opacity="0.95"/>
+      <stop offset="75%" stop-color="#F5F5F5" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-120 0;120 0;-120 0" dur="7s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="520" rx="28" fill="url(#bg)"/>
+
+  <ellipse cx="1180" cy="260" rx="460" ry="300" fill="url(#orangeGlow)" filter="url(#softBlur)" opacity="0.82">
+    <animate attributeName="cx" values="1140;1260;1140" dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.55;0.9;0.55" dur="7s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- solid flowing waveform with glow -->
+  <path d="M220 356
+           C290 356 320 356 365 354
+           C420 352 448 315 495 316
+           C540 317 558 392 606 391
+           C656 390 675 330 724 331
+           C775 332 795 372 845 372
+           C898 372 925 338 980 337
+           C1030 336 1058 360 1108 361
+           C1165 362 1220 354 1380 354"
+        stroke="#FF7A1A" stroke-opacity="0.23" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"
+        fill="none" filter="url(#lineGlow)">
+    <animate attributeName="d" dur="6s" repeatCount="indefinite"
+      values="
+      M220 356 C290 356 320 356 365 354 C420 352 448 315 495 316 C540 317 558 392 606 391 C656 390 675 330 724 331 C775 332 795 372 845 372 C898 372 925 338 980 337 C1030 336 1058 360 1108 361 C1165 362 1220 354 1380 354;
+      M220 354 C290 354 322 353 370 352 C430 350 458 333 503 334 C550 335 569 380 615 379 C666 378 684 344 732 345 C783 346 804 366 853 366 C903 366 933 346 988 345 C1040 344 1070 352 1118 353 C1176 354 1230 350 1380 350;
+      M220 356 C290 356 320 356 365 354 C420 352 448 315 495 316 C540 317 558 392 606 391 C656 390 675 330 724 331 C775 332 795 372 845 372 C898 372 925 338 980 337 C1030 336 1058 360 1108 361 C1165 362 1220 354 1380 354"/>
+  </path>
+
+  <path d="M220 356
+           C290 356 320 356 365 354
+           C420 352 448 315 495 316
+           C540 317 558 392 606 391
+           C656 390 675 330 724 331
+           C775 332 795 372 845 372
+           C898 372 925 338 980 337
+           C1030 336 1058 360 1108 361
+           C1165 362 1220 354 1380 354"
+        stroke="url(#lineGrad)" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"
+        fill="none">
+    <animate attributeName="d" dur="6s" repeatCount="indefinite"
+      values="
+      M220 356 C290 356 320 356 365 354 C420 352 448 315 495 316 C540 317 558 392 606 391 C656 390 675 330 724 331 C775 332 795 372 845 372 C898 372 925 338 980 337 C1030 336 1058 360 1108 361 C1165 362 1220 354 1380 354;
+      M220 354 C290 354 322 353 370 352 C430 350 458 333 503 334 C550 335 569 380 615 379 C666 378 684 344 732 345 C783 346 804 366 853 366 C903 366 933 346 988 345 C1040 344 1070 352 1118 353 C1176 354 1230 350 1380 350;
+      M220 356 C290 356 320 356 365 354 C420 352 448 315 495 316 C540 317 558 392 606 391 C656 390 675 330 724 331 C775 332 795 372 845 372 C898 372 925 338 980 337 C1030 336 1058 360 1108 361 C1165 362 1220 354 1380 354"/>
+  </path>
+
+  <circle cx="800" cy="214" r="5" fill="#FF7A1A">
+    <animate attributeName="r" values="4;6;4" dur="3.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.65;1;0.65" dur="3.2s" repeatCount="indefinite"/>
+  </circle>
+
+  <text x="800" y="290"
+        text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Arial,sans-serif"
+        font-size="70"
+        font-weight="600"
+        letter-spacing="-2.6"
+        filter="url(#textGlow)">
+    <tspan fill="#F5F5F3">Welcome to Data </tspan><tspan fill="#FF7A1A">Sound</tspan>
+  </text>
+
+  <rect x="1" y="1" width="1598" height="518" rx="27"
+        stroke="#FFFFFF" stroke-opacity="0.07"/>
+</svg>
