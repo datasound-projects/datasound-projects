@@ -1,15 +1,15 @@
 <p align="center">
   <a href="https://datasound.cloud/">
-    <img src="./assets/datasound-banner.svg"
-         alt="Welcome to Data Sound"
-         width="100%" />
+    <img src="./assets/datasound-banner.svg" alt="Welcome to Data Sound" width="100%" />
   </a>
 </p>
 
 <p align="center">
-  <img src="./assets/profile-intro.svg"
-       alt="AI Engineering · Agentic Systems · MLOps · Data Science"
-       width="100%" />
+  AI Engineering · Agentic Systems · MLOps · Data Science
+</p>
+
+<p align="center">
+  Building intelligent systems, research tools and infrastructure.
 </p>
 
 <p align="center">
