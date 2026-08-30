@@ -1,61 +1,124 @@
 <svg width="1600" height="520" viewBox="0 0 1600 520" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="520" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#050505"/>
-      <stop offset="52%" stop-color="#0B0B0C"/>
+      <stop offset="0%" stop-color="#040404"/>
+      <stop offset="48%" stop-color="#09090A"/>
       <stop offset="100%" stop-color="#111113"/>
     </linearGradient>
 
     <radialGradient id="orangeGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
-                    gradientTransform="translate(1180 260) rotate(180) scale(520 360)">
-      <stop offset="0%" stop-color="#FF7A1A" stop-opacity="0.24"/>
-      <stop offset="55%" stop-color="#FF7A1A" stop-opacity="0.08"/>
+                    gradientTransform="translate(1110 260) rotate(180) scale(600 380)">
+      <stop offset="0%" stop-color="#FF7A1A" stop-opacity="0.34"/>
+      <stop offset="38%" stop-color="#FF7A1A" stop-opacity="0.14"/>
+      <stop offset="72%" stop-color="#FF7A1A" stop-opacity="0.045"/>
       <stop offset="100%" stop-color="#FF7A1A" stop-opacity="0"/>
     </radialGradient>
 
-    <filter id="softBlur" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="70"/>
+    <radialGradient id="soundHalo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(1040 264) rotate(90) scale(170 310)">
+      <stop offset="0%" stop-color="#FF9B52" stop-opacity="0.25"/>
+      <stop offset="42%" stop-color="#FF7A1A" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#FF7A1A" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="softWhiteHalo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(760 235) rotate(90) scale(170 410)">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.055"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="lineGrad" x1="260" y1="0" x2="1340" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="16%" stop-color="#EDEDED" stop-opacity="0.16"/>
+      <stop offset="39%" stop-color="#FFAF72" stop-opacity="0.52"/>
+      <stop offset="52%" stop-color="#FF7A1A" stop-opacity="1"/>
+      <stop offset="68%" stop-color="#FFD4B4" stop-opacity="0.52"/>
+      <stop offset="84%" stop-color="#F5F5F5" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-160 0;160 0;-160 0" dur="6.4s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <linearGradient id="pulseGrad" x1="420" y1="0" x2="1180" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFF2E8" stop-opacity="0"/>
+      <stop offset="42%" stop-color="#FFD8B9" stop-opacity="0.25"/>
+      <stop offset="54%" stop-color="#FFF7F0" stop-opacity="1"/>
+      <stop offset="64%" stop-color="#FF8A33" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FF7A1A" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="softBlur" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="74"/>
     </filter>
 
-    <filter id="lineGlow" x="-20%" y="-80%" width="140%" height="260%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
+    <filter id="haloBlur" x="-60%" y="-80%" width="220%" height="260%">
+      <feGaussianBlur stdDeviation="34"/>
+    </filter>
+
+    <filter id="waveAura" x="-20%" y="-120%" width="140%" height="340%">
+      <feGaussianBlur stdDeviation="15"/>
+    </filter>
+
+    <filter id="waveGlow" x="-20%" y="-100%" width="140%" height="300%">
+      <feGaussianBlur stdDeviation="6.5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <filter id="textGlow" x="-20%" y="-40%" width="140%" height="180%">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
+    <filter id="soundBloomWide" x="-80%" y="-160%" width="260%" height="420%">
+      <feGaussianBlur stdDeviation="26" result="blur"/>
       <feColorMatrix in="blur" type="matrix"
-        values="1 0 0 0 0.95
-                0 0.45 0 0 0.24
-                0 0 0.10 0 0.02
-                0 0 0 0.16 0"/>
+        values="1 0 0 0 0.15
+                0 0.46 0 0 0.02
+                0 0 0.10 0 0
+                0 0 0 1 0"/>
+    </filter>
+
+    <filter id="soundBloomTight" x="-55%" y="-100%" width="210%" height="300%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0.10
+                0 0.52 0 0 0.02
+                0 0 0.12 0 0
+                0 0 0 1 0"/>
+    </filter>
+
+    <filter id="titleSoftGlow" x="-20%" y="-60%" width="140%" height="220%">
+      <feGaussianBlur stdDeviation="2.4" result="blur"/>
+      <feColorMatrix in="blur" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.30 0"/>
       <feMerge>
-        <feMergeNode/>
+        <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-
-    <linearGradient id="lineGrad" x1="260" y1="0" x2="1340" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
-      <stop offset="18%" stop-color="#D8D8D8" stop-opacity="0.18"/>
-      <stop offset="48%" stop-color="#FF7A1A" stop-opacity="0.95"/>
-      <stop offset="75%" stop-color="#F5F5F5" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
-      <animateTransform attributeName="gradientTransform" type="translate" values="-120 0;120 0;-120 0" dur="7s" repeatCount="indefinite"/>
-    </linearGradient>
   </defs>
 
   <rect width="1600" height="520" rx="28" fill="url(#bg)"/>
 
-  <ellipse cx="1180" cy="260" rx="460" ry="300" fill="url(#orangeGlow)" filter="url(#softBlur)" opacity="0.82">
-    <animate attributeName="cx" values="1140;1260;1140" dur="10s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.55;0.9;0.55" dur="7s" repeatCount="indefinite"/>
+  <!-- deep atmospheric illumination -->
+  <ellipse cx="1110" cy="260" rx="520" ry="320" fill="url(#orangeGlow)" filter="url(#softBlur)" opacity="0.94">
+    <animate attributeName="cx" values="1065;1185;1065" dur="10s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.66;1;0.66" dur="7s" repeatCount="indefinite"/>
   </ellipse>
+  <ellipse cx="1040" cy="264" rx="290" ry="145" fill="url(#soundHalo)" filter="url(#haloBlur)" opacity="0.95">
+    <animate attributeName="opacity" values="0.62;1;0.62" dur="4.8s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="760" cy="235" rx="380" ry="145" fill="url(#softWhiteHalo)" filter="url(#haloBlur)" opacity="0.75"/>
 
-  <!-- solid flowing waveform with glow -->
+  <!-- subtle waveform reflections for depth -->
+  <g opacity="0.11" filter="url(#waveAura)">
+    <path d="M220 356 C290 356 320 356 365 354 C420 352 448 315 495 316 C540 317 558 392 606 391 C656 390 675 330 724 331 C775 332 795 372 845 372 C898 372 925 338 980 337 C1030 336 1058 360 1108 361 C1165 362 1220 354 1380 354"
+          transform="translate(0 -12)" stroke="#FF7A1A" stroke-width="12" stroke-linecap="round" fill="none"/>
+    <path d="M220 356 C290 356 320 356 365 354 C420 352 448 315 495 316 C540 317 558 392 606 391 C656 390 675 330 724 331 C775 332 795 372 845 372 C898 372 925 338 980 337 C1030 336 1058 360 1108 361 C1165 362 1220 354 1380 354"
+          transform="translate(0 13)" stroke="#FF7A1A" stroke-width="12" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- wide waveform aura -->
   <path d="M220 356
            C290 356 320 356 365 354
            C420 352 448 315 495 316
@@ -65,8 +128,8 @@
            C898 372 925 338 980 337
            C1030 336 1058 360 1108 361
            C1165 362 1220 354 1380 354"
-        stroke="#FF7A1A" stroke-opacity="0.23" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"
-        fill="none" filter="url(#lineGlow)">
+        stroke="#FF7A1A" stroke-opacity="0.34" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"
+        fill="none" filter="url(#waveAura)">
     <animate attributeName="d" dur="6s" repeatCount="indefinite"
       values="
       M220 356 C290 356 320 356 365 354 C420 352 448 315 495 316 C540 317 558 392 606 391 C656 390 675 330 724 331 C775 332 795 372 845 372 C898 372 925 338 980 337 C1030 336 1058 360 1108 361 C1165 362 1220 354 1380 354;
@@ -74,6 +137,26 @@
       M220 356 C290 356 320 356 365 354 C420 352 448 315 495 316 C540 317 558 392 606 391 C656 390 675 330 724 331 C775 332 795 372 845 372 C898 372 925 338 980 337 C1030 336 1058 360 1108 361 C1165 362 1220 354 1380 354"/>
   </path>
 
+  <!-- mid glow -->
+  <path d="M220 356
+           C290 356 320 356 365 354
+           C420 352 448 315 495 316
+           C540 317 558 392 606 391
+           C656 390 675 330 724 331
+           C775 332 795 372 845 372
+           C898 372 925 338 980 337
+           C1030 336 1058 360 1108 361
+           C1165 362 1220 354 1380 354"
+        stroke="#FF7A1A" stroke-opacity="0.30" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"
+        fill="none" filter="url(#waveGlow)">
+    <animate attributeName="d" dur="6s" repeatCount="indefinite"
+      values="
+      M220 356 C290 356 320 356 365 354 C420 352 448 315 495 316 C540 317 558 392 606 391 C656 390 675 330 724 331 C775 332 795 372 845 372 C898 372 925 338 980 337 C1030 336 1058 360 1108 361 C1165 362 1220 354 1380 354;
+      M220 354 C290 354 322 353 370 352 C430 350 458 333 503 334 C550 335 569 380 615 379 C666 378 684 344 732 345 C783 346 804 366 853 366 C903 366 933 346 988 345 C1040 344 1070 352 1118 353 C1176 354 1230 350 1380 350;
+      M220 356 C290 356 320 356 365 354 C420 352 448 315 495 316 C540 317 558 392 606 391 C656 390 675 330 724 331 C775 332 795 372 845 372 C898 372 925 338 980 337 C1030 336 1058 360 1108 361 C1165 362 1220 354 1380 354"/>
+  </path>
+
+  <!-- crisp waveform core -->
   <path d="M220 356
            C290 356 320 356 365 354
            C420 352 448 315 495 316
@@ -92,21 +175,54 @@
       M220 356 C290 356 320 356 365 354 C420 352 448 315 495 316 C540 317 558 392 606 391 C656 390 675 330 724 331 C775 332 795 372 845 372 C898 372 925 338 980 337 C1030 336 1058 360 1108 361 C1165 362 1220 354 1380 354"/>
   </path>
 
-  <circle cx="800" cy="214" r="5" fill="#FF7A1A">
-    <animate attributeName="r" values="4;6;4" dur="3.2s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values="0.65;1;0.65" dur="3.2s" repeatCount="indefinite"/>
-  </circle>
+  <!-- travelling light pulse -->
+  <path d="M220 356 C290 356 320 356 365 354 C420 352 448 315 495 316 C540 317 558 392 606 391 C656 390 675 330 724 331 C775 332 795 372 845 372 C898 372 925 338 980 337 C1030 336 1058 360 1108 361 C1165 362 1220 354 1380 354"
+        stroke="url(#pulseGrad)" stroke-width="2.2" stroke-linecap="round" fill="none"
+        stroke-dasharray="72 430" stroke-dashoffset="0" opacity="0.86" filter="url(#waveGlow)">
+    <animate attributeName="stroke-dashoffset" values="0;-1004" dur="5.2s" repeatCount="indefinite"/>
+    <animate attributeName="d" dur="6s" repeatCount="indefinite"
+      values="
+      M220 356 C290 356 320 356 365 354 C420 352 448 315 495 316 C540 317 558 392 606 391 C656 390 675 330 724 331 C775 332 795 372 845 372 C898 372 925 338 980 337 C1030 336 1058 360 1108 361 C1165 362 1220 354 1380 354;
+      M220 354 C290 354 322 353 370 352 C430 350 458 333 503 334 C550 335 569 380 615 379 C666 378 684 344 732 345 C783 346 804 366 853 366 C903 366 933 346 988 345 C1040 344 1070 352 1118 353 C1176 354 1230 350 1380 350;
+      M220 356 C290 356 320 356 365 354 C420 352 448 315 495 316 C540 317 558 392 606 391 C656 390 675 330 724 331 C775 332 795 372 845 372 C898 372 925 338 980 337 C1030 336 1058 360 1108 361 C1165 362 1220 354 1380 354"/>
+  </path>
 
+  <!-- SOUND-only wide bloom. Transparent first tspan preserves exact text alignment. -->
   <text x="800" y="290"
         text-anchor="middle"
         font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Arial,sans-serif"
         font-size="70"
         font-weight="600"
         letter-spacing="-2.6"
-        filter="url(#textGlow)">
-    <tspan fill="#F5F5F3">Welcome to Data </tspan><tspan fill="#FF7A1A">Sound</tspan>
+        filter="url(#soundBloomWide)"
+        opacity="0.82">
+    <tspan fill="#FF7A1A" fill-opacity="0">Welcome to Data </tspan><tspan fill="#FF7A1A">Sound</tspan>
   </text>
 
+  <!-- SOUND-only tight bloom -->
+  <text x="800" y="290"
+        text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Arial,sans-serif"
+        font-size="70"
+        font-weight="600"
+        letter-spacing="-2.6"
+        filter="url(#soundBloomTight)"
+        opacity="0.92">
+    <tspan fill="#FF7A1A" fill-opacity="0">Welcome to Data </tspan><tspan fill="#FF7A1A">Sound</tspan>
+  </text>
+
+  <!-- main title -->
+  <text x="800" y="290"
+        text-anchor="middle"
+        font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,Arial,sans-serif"
+        font-size="70"
+        font-weight="600"
+        letter-spacing="-2.6"
+        filter="url(#titleSoftGlow)">
+    <tspan fill="#F5F5F3">Welcome to Data </tspan><tspan fill="#FF862B">Sound</tspan>
+  </text>
+
+  <!-- fine border -->
   <rect x="1" y="1" width="1598" height="518" rx="27"
-        stroke="#FFFFFF" stroke-opacity="0.07"/>
+        stroke="#FFFFFF" stroke-opacity="0.075"/>
 </svg>
