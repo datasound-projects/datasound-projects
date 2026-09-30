@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  AI Engineering · Agentic AI Systems · MLOps · Data Science · GenAI & Data Apps
+  AI Platform Engineering · Agentic AI Systems · MLOps · Data Science · GenAI & Data Apps
 </p>
 
 <p align="center">
