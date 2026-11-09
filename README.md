@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://datasound.cloud/">
-    <img src="https://raw.githubusercontent.com/datasound-projects/datasound-projects/46dc507/assets/datasound-banner.svg" alt="DATASOUND" width="100%" />
+    <img src="https://raw.githubusercontent.com/datasound-projects/datasound-projects/c9b9513/assets/datasound-banner.svg" alt="DATASOUND" width="100%" />
   </a>
 </p>
 
